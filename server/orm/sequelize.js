@@ -1,5 +1,8 @@
 const Sequelize = require("sequelize");
 
+const PointModel = require("../models/Point");
+const CommentModel = require("../models/Comment");
+
 const {
   DATABASE_NAME,
   USERNAME,
@@ -20,6 +23,8 @@ const sequelize = new Sequelize(DATABASE_NAME, USERNAME, PASSWORD, {
     idle: 10000,
   },
 });
+const Point = PointModel(sequelize, Sequelize);
+const Comment = CommentModel(sequelize, Sequelize);
 
 sequelize
   .sync({ force: false })
@@ -28,4 +33,4 @@ sequelize
   })
   .catch((err) => console.log(err));
 
-module.exports = {};
+module.exports = { Point, Comment };

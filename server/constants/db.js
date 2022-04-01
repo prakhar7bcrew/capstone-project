@@ -1,8 +1,8 @@
-const DATABASE_NAME = "demo";
-const USERNAME = "root";
-const PASSWORD = "";
+const DATABASE_NAME = "capstone";
+const USERNAME = "postgres";
+const PASSWORD = "1298";
 const HOST = "localhost";
-const DIALECT = "mysql";
+const DIALECT = "postgres";
 module.exports = {
   DATABASE_NAME: DATABASE_NAME,
   USERNAME: USERNAME,
